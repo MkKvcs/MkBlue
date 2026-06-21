@@ -1,7 +1,7 @@
 name: mkblue-laptop
 description: ha
 
-base-image: ghcr.io/secureblue/silverblue-main-hardened
+base-image: ghcr.io/secureblue/kinoite-main-hardened
 image-version: latest
 
 modules:
@@ -19,11 +19,8 @@ modules:
       
   - type: default-flatpaks
     notify: true
-    user:
-      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      repo-name: flathub
+    scope: user
       install:
-        - com.spotify.Client
         - com.discordapp.Discord
         - org.signal.Signal
         - org.videolan.VLC
@@ -31,11 +28,6 @@ modules:
         - org.onlyoffice.desktopeditors
         - io.github.shiftey.Desktop
         - org.qbittorrent.qBittorrent
-        - com.jetbrains.Rider
-        - com.protonvpn.www
-        - org.gnome.Extensions
-        - org.gnome.Papers
-        - org.gnome.TextEditor
       
   - type: script
     scripts:
