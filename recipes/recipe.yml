@@ -18,9 +18,10 @@ modules:
       - solaar
       
   - type: default-flatpaks
-    notify: true
-    scope: user
-    install:
+    configurations:
+     - notify: true
+      scope: user
+      install:
         - com.discordapp.Discord
         - org.signal.Signal
         - org.videolan.VLC
