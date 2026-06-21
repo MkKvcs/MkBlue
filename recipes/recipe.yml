@@ -20,8 +20,8 @@ modules:
   - type: default-flatpaks
     configurations:
      - notify: true
-      scope: user
-      install:
+       scope: user
+       install:
         - com.discordapp.Discord
         - org.signal.Signal
         - org.videolan.VLC
